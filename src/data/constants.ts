@@ -248,7 +248,7 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    startDate: "Dec 2024",
+    startDate: "2025",
     endDate: "Present",
     title: "Full Stack Engineer",
     company: "OmniNexus",
@@ -265,23 +265,23 @@ export const EXPERIENCE: Experience[] = [
       SkillNames.AWS,
     ],
   },
+
   {
-    id: 2,
-    startDate: "Apr 2022",
-    endDate: "Dec 2024",
-    title: "Freelance Developer",
-    company: "Live & Learn",
+    id: 3,
+    startDate: "Jul 2023",
+    endDate: "Jun 2026",
+    title: "BCA Student",
+    company: "BCA Journey",
     description: [
-      "Delivered custom web solutions for diverse clients.",
-      "Managed full project lifecycles from design to deployment.",
-      "Maintained high client satisfaction through effective communication.",
+      "Started my deep dive into Computer Applications, building a strong foundation in programming.",
+      "Exploring various technologies including Web Development, Database Management, and Software Engineering.",
+      "Participating in coding events and hackathons to sharpen problem-solving skills.",
     ],
     skills: [
-      SkillNames.REACT,
-      SkillNames.NODEJS,
-      SkillNames.MONGODB,
-      SkillNames.TAILWIND,
-      SkillNames.WORDPRESS,
+      SkillNames.HTML,
+      SkillNames.CSS,
+      SkillNames.JS,
+      SkillNames.GIT,
     ],
   },
 ];
