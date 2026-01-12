@@ -3,7 +3,9 @@ import { config } from "@/data/config";
 import { Resend } from "resend";
 import { z } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
+
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 const Email = z.object({
   fullName: z.string().min(2, "Full name is invalid!"),
@@ -12,6 +14,11 @@ const Email = z.object({
 });
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      return Response.json({ error: "Missing RESEND_API_KEY" }, { status: 500 });
+    }
+    const resend = new Resend(apiKey);
     const body = await req.json();
     console.log(body);
     const {
